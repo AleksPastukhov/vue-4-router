@@ -6,29 +6,39 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav class="navigation">
-        <ul>
-          <li>
-            <RouterLink class="link" to="/">Home</RouterLink>
-          </li>
-          <li>
-            <RouterLink class="link" to="/about">About</RouterLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- <Suspense>
+  <template class="wrapp">
+    <header>
+      <div class="wrapper">
+        <nav class="navigation">
+          <ul>
+            <li>
+              <RouterLink class="link" to="/home">Home</RouterLink>
+            </li>
+            <li>
+              <RouterLink class="link" to="/about">About</RouterLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <h1>Проект создан исключительно в учебных целях</h1>
+    <!-- <Suspense>
     <template #fallback><h2>Loading...</h2></template>
     <slot></slot>
   </Suspense> -->
 
-  <RouterView />
+    <RouterView />
+  </template>
 </template>
 
 <style scoped>
+.wrapp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .link {
   padding: 4px;
   color: #1f2833;
@@ -61,6 +71,7 @@ ul {
 }
 
 header {
+  width: 100%;
   color: #1f2833;
 }
 </style>
